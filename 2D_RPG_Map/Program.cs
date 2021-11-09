@@ -9,9 +9,12 @@ namespace _2D_RPG_Map
 	class Program
 	{
 
+		static int x = 0;
+		static int y = 0;
 		//static	char[,] Area = new char[3, 3];
 		static System.Random random = new System.Random();
 		//static int scale;
+	
 		static char[,] map = new char[,] // dimensions defined by following data:
 		{
 				{'/','^','^','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/','/'},
@@ -113,9 +116,13 @@ namespace _2D_RPG_Map
 
 		}
 
-		static void ColorCode()
+		static void ColorCode(int x ,int y)
 		{
 			
+			/*for (map[x, y] == "*")
+			{
+				Console.ForegroundColor = ConsoleColor.Green;
+			}*/
 		}
 
 	}
