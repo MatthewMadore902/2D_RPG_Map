@@ -73,46 +73,95 @@ namespace _2D_RPG_Map
 			Area[2, 1] = '+';
 			Area[2, 2] = '~';*/
 
+			Console.Write("╔");
+			for (int TopBorder = 0; TopBorder < map.GetLength(1); TopBorder++)
+			{
+				Console.Write("═");
+			}
+
+			Console.WriteLine("╗");
 			for (int x = 0; x <= 11; x++)
 			{
-
-				Console.WriteLine();
+				Console.Write("▒");
 
 				for (int y = 0; y <= 29; y++)
 				{
-					Console.Write(map[x, y]);
 
+					Console.Write(map[x, y]);
 
 				}
 
+				Console.WriteLine("▒");
 			}
+			Console.Write("╚");
+			for (int BottomBorder = 0; BottomBorder < map.GetLength(1); BottomBorder++)
+			{
+				Console.Write("═");
+			}
+			Console.WriteLine("╝");
+
+
+
+
+
 		}
-
-
 
 
 		static void DisplayMap(int scale)
 		{
+			//Border(scale);
+/*			Console.Write("╔");
+			for (int TopBorder = 0; TopBorder <= map.GetLength(0) * scale; TopBorder++)
+			{
+				Console.WriteLine("═");
+			}
+			Console.Write("╚");*/
+
+/*			Console.Write("╗");
+			for (int BottomBorder = 0; BottomBorder <= map.GetLength(0) * scale; BottomBorder++)
+			{
+				Console.WriteLine("═");
+			}
+			Console.Write("╝");*/
+
+
+			Console.Write("╔");
+			for (int TopBorder = 0; TopBorder < map.GetLength(1) * scale; TopBorder++)
+			{
+				Console.Write("═");
+			}
+			
+			Console.WriteLine("╗");
 
 			for (int x = 0; x < map.GetLength(0); x++)
 			{
 
-
 				for (int xx = 0; xx < scale; xx++)
 				{
-
-					Console.WriteLine();
+					Console.Write("▒");
+					
 					for (int y = 0; y < map.GetLength(1); y++)
 					{
-
-
+						
 						for (int yy = 0; yy < scale; yy++)
 						{
+
 							Console.Write(map[x, y]);
 						}
+						
 					}
+					Console.WriteLine("▒");
 				}
+
 			}
+			Console.Write("╚");
+			for (int BottomBorder = 0; BottomBorder < map.GetLength(1) * scale; BottomBorder++)
+			{
+				Console.Write("═");
+			}
+			Console.WriteLine("╝");
+
+
 
 		}
 
