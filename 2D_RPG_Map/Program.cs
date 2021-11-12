@@ -8,7 +8,7 @@ namespace _2D_RPG_Map
 {
 	class Program
 	{
-
+		static int scale;
 		static int x = 0;
 		static int y = 0;
 		//static	char[,] Area = new char[3, 3];
@@ -34,6 +34,7 @@ namespace _2D_RPG_Map
 
 		static void Main(string[] args)
 		{
+			
 			Console.WriteLine();
 			DisplayMap();
 			Console.ReadKey(true);
@@ -54,7 +55,7 @@ namespace _2D_RPG_Map
 
 		static void DisplayMap()
 		{
-
+			ColorCode(x, y);
 
 
 			Console.WriteLine(" map legend: ");
@@ -110,20 +111,21 @@ namespace _2D_RPG_Map
 		static void DisplayMap(int scale)
 		{
 			//Border(scale);
-/*			Console.Write("╔");
-			for (int TopBorder = 0; TopBorder <= map.GetLength(0) * scale; TopBorder++)
-			{
-				Console.WriteLine("═");
-			}
-			Console.Write("╚");*/
+			/*			Console.Write("╔");
+						for (int TopBorder = 0; TopBorder <= map.GetLength(0) * scale; TopBorder++)
+						{
+							Console.WriteLine("═");
+						}
+						Console.Write("╚");*/
 
-/*			Console.Write("╗");
-			for (int BottomBorder = 0; BottomBorder <= map.GetLength(0) * scale; BottomBorder++)
-			{
-				Console.WriteLine("═");
-			}
-			Console.Write("╝");*/
+			/*			Console.Write("╗");
+						for (int BottomBorder = 0; BottomBorder <= map.GetLength(0) * scale; BottomBorder++)
+						{
+							Console.WriteLine("═");
+						}
+						Console.Write("╝");*/
 
+			ColorCode(x, y);
 
 			Console.Write("╔");
 			for (int TopBorder = 0; TopBorder < map.GetLength(1) * scale; TopBorder++)
@@ -167,9 +169,11 @@ namespace _2D_RPG_Map
 
 		static void ColorCode(int x ,int y)
 		{
-			
-			/*for (map[x, y] == "*")
+/*			ConsoleColor foreground = Console.ForegroundColor;
+
+			foreach(map[x, y] == '*')
 			{
+				//wgen we go over this can you show me how to properly please.
 				Console.ForegroundColor = ConsoleColor.Green;
 			}*/
 		}
